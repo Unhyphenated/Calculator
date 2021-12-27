@@ -1,0 +1,65 @@
+.container {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+} 
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, rgb(88, 0, 146), rgb(0, 255, 200));
+}
+
+.container {
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.container > button {
+    background-color: rgba(255, 255, 255, .75);
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+}
+
+.container > button:hover {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.display {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.display .previous-operation {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, .75);
+}
+
+.display .current-operation {
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, .9);
+}
+
+.footer {
+    color: white;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+}
